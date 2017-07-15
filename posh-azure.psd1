@@ -9,7 +9,7 @@
 @{
 
 # Script module or binary module file associated with this manifest.
-RootModule = 'posh-azure'
+# RootModule = 'posh-azure'
 
 # Version number of this module.
 ModuleVersion = '0.1.0'
@@ -48,7 +48,7 @@ PowerShellVersion = '3.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @('TabExpansionPlusPlus')
+# RequiredModules = @('TabExpansionPlusPlus')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
