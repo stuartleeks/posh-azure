@@ -36,10 +36,10 @@ function DeploymentNameCompleter {
     }
 }
 
-#  "'" + [string]::Join("', '", (Get-Command -Module Azure* -ParameterName DeploymentName -ParameterType string)) + "'" | clip
+# "'" + [string]::Join("', '", (Get-Command -Module AzureRm* -ParameterName DeploymentName -ParameterType string | Sort-Object -Property Name)) + "'" | clip
 
 Register-ArgumentCompleter `
-    -Command ( 'Get-AzureDeploymentEvent', 'Get-AzureRmResourceGroupDeployment', 'Get-AzureRmResourceGroupDeploymentOperation', 'Move-AzureService', 'New-AzureDeployment', 'New-AzureRmResourceGroupDeployment', 'New-AzureVM', 'Publish-AzureServiceProject', 'Remove-AzureRmResourceGroupDeployment', 'Save-AzureRmResourceGroupDeploymentTemplate', 'Stop-AzureRmResourceGroupDeployment') `
+    -Command ( 'Get-AzureRmResourceGroupDeployment', 'Get-AzureRmResourceGroupDeploymentOperation', 'New-AzureRmResourceGroupDeployment', 'Remove-AzureRmResourceGroupDeployment', 'Save-AzureRmResourceGroupDeploymentTemplate', 'Stop-AzureRmResourceGroupDeployment' ) `
     -Parameter 'ResourceGroupName' `
     -Description 'Complete the -DeploymentName parameter value for Azure cmdlets: Get-AzureDeploymentEvent -DeploymentName <TAB>' `
     -ScriptBlock $function:DeploymentNameCompleter
