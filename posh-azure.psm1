@@ -1,5 +1,4 @@
-Push-Location $PSScriptRoot
-. .\DeploymentNameCompletion.ps1
-. .\LocationCompletion.ps1
-. .\ResourceGroupNameCompletion.ps1
-Pop-Location
+foreach ($file in dir $PSScriptRoot\completions\*.ps1)
+{
+    . $file.FullName
+}

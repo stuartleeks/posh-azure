@@ -84,7 +84,11 @@ AliasesToExport = ''
 # ModuleList = @('')
 
 # List of all files packaged with this module
-FileList = @('posh-azure.psm1', 'DeploymentNameCompletion.ps1', 'LocationCompletion.ps1', 'ResourceGroupNameCompletion.ps1')
+FileList = @('posh-azure.psm1', 
+            'completions/DeploymentNameCompletion.ps1', 
+            'completions/LocationCompletion.ps1', 
+            'completions/ResourceGroupNameCompletion.ps1'
+            )
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
     PrivateData = @{
