@@ -87,7 +87,8 @@ AliasesToExport = ''
 FileList = @('posh-azure.psm1', 
             'completions/DeploymentNameCompletion.ps1', 
             'completions/LocationCompletion.ps1', 
-            'completions/ResourceGroupNameCompletion.ps1'
+            'completions/ResourceGroupNameCompletion.ps1',
+            'completions/WebAppNameCompletion.ps1'
             )
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
