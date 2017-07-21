@@ -1,14 +1,3 @@
-#
-# .SYNOPSIS
-#
-#    Auto-complete the -Location parameter value for Azure PowerShell cmdlets. (version 1.0)
-#
-# .NOTES
-#    
-#    Created by Stuart Leeks
-#    http://blogs.msdn.com/stuartleeks
-#    http://twitter.com/stuartleeks
-#
 function LocationCompleter
 {
     param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameter)
