@@ -18,3 +18,22 @@ After intalling the pre-requisites above, install [posh-azure](https://www.power
 ```powershell
  Install-Module -Name posh-azure
 ```
+
+Once the module is installed, you can load it with:
+
+```powershell
+ Import-Module -Name posh-azure
+```
+
+
+## Release notes
+
+## 0.1.1 (published 2017-07-21)
+Add completion for
+* WebApp names
+
+## 0.1.0 First version (published 2017-07-15)
+Completion for 
+* ResourceGroupName parameters
+* Location parameters
+* DeploymentName parameters
