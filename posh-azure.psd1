@@ -12,7 +12,7 @@
 RootModule = 'posh-azure.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.1'
 
 # ID used to uniquely identify this module
 GUID = 'd5f7b02a-4cf0-4ed6-861c-5fdd4a28f658'
