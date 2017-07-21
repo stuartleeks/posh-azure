@@ -4,6 +4,8 @@ A project intended to make working with the Azure PowerShell cmdlets a little mo
 
 Currently the project adds completion for parameters (e.g. ResourceGroupName, Location)
 
+![resource group and deployment name completion](media/group-and-deployment.gif)
+
 I plan to keep working on this to improve completion, but if there are parameters that aren't completing (or completing incorrectly) then raise an issue :-)
 
 ## Dependencies
