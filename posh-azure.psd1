@@ -12,7 +12,7 @@
 RootModule = 'posh-azure.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.1'
+ModuleVersion = '0.2.0'
 
 # ID used to uniquely identify this module
 GUID = 'd5f7b02a-4cf0-4ed6-861c-5fdd4a28f658'
@@ -85,9 +85,11 @@ AliasesToExport = ''
 
 # List of all files packaged with this module
 FileList = @('posh-azure.psm1', 
+            'completions/AppServicePlanNameCompletion.ps1', 
             'completions/DeploymentNameCompletion.ps1', 
             'completions/LocationCompletion.ps1', 
             'completions/ResourceGroupNameCompletion.ps1',
+            'completions/StorageAccountNameCompletion.ps1',
             'completions/WebAppNameCompletion.ps1'
             )
 
@@ -109,7 +111,7 @@ FileList = @('posh-azure.psm1',
             # IconUri = ''
     
             # ReleaseNotes of this module
-            # ReleaseNotes = ''
+            ReleaseNotes = 'https://github.com/stuartleeks/posh-azure/blob/master/README.md#release-notes'
     
         } # End of PSData hashtable
     

@@ -30,6 +30,13 @@ Once the module is installed, you can load it with:
 
 ## Release notes
 
+## 0.2.0 (published 2017-08-31)
+Add completion for 
+* AppServicePlan name
+* StorageAccount name
+
+Revise commands that ResourceGroupName completion is applied to
+
 ## 0.1.1 (published 2017-07-21)
 Add completion for
 * WebApp names
