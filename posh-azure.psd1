@@ -66,7 +66,7 @@ PowerShellVersion = '3.0'
 # NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = ''
+FunctionsToExport = 'Show-AzureRmResourceGroupDeploymentProgress'
 
 # Cmdlets to export from this module
 CmdletsToExport = ''

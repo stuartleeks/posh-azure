@@ -28,8 +28,8 @@ function DeploymentNameCompleter {
 # "'" + [string]::Join("', '", (Get-Command -Module AzureRm* -ParameterName DeploymentName -ParameterType string | Sort-Object -Property Name)) + "'" | clip
 
 Register-ArgumentCompleter `
-    -Command ( 'Get-AzureRmResourceGroupDeployment', 'Get-AzureRmResourceGroupDeploymentOperation', 'New-AzureRmResourceGroupDeployment', 'Remove-AzureRmResourceGroupDeployment', 'Save-AzureRmResourceGroupDeploymentTemplate', 'Stop-AzureRmResourceGroupDeployment' ) `
-    -Parameter 'ResourceGroupName' `
+    -Command ( 'Show-AzureRmResourceGroupDeploymentProgress', 'Get-AzureRmResourceGroupDeployment', 'Get-AzureRmResourceGroupDeploymentOperation', 'New-AzureRmResourceGroupDeployment', 'Remove-AzureRmResourceGroupDeployment', 'Save-AzureRmResourceGroupDeploymentTemplate', 'Stop-AzureRmResourceGroupDeployment' ) `
+    -Parameter 'DeploymentName' `
     -ScriptBlock $function:DeploymentNameCompleter
     
 Register-ArgumentCompleter `
