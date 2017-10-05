@@ -30,7 +30,10 @@ Once the module is installed, you can load it with:
 
 ## Release notes
 
-## 0.3.0 (published ??)
+## 0.3.1 (published 2017-10-05)
+Fix colourisation of Show-AzureRmResourceGroupDeploymentProgress output on linux/bash
+
+## 0.3.0 (published 2017-10-05)
 Add completion for
 * VM Names
 * Update to enable working without TabExpansionPlusPlus installed (which helps with PowerShellCore!)
