@@ -66,8 +66,8 @@ function DumpOperations($operations) {
     @{Expression = {$_.Duration}; Label = "Duration"; width = 20}
 
     $text = $operations | Format-Table  $tableFormat | Out-String
-    $text.Split("`r") | ForEach-Object {
-        $line = $_.Trim("`n")
+    $text.Split("`n") | ForEach-Object {
+        $line = $_.Trim("`r")
         if ($line.StartsWith("Succeeded")) {
             Write-Host -ForegroundColor DarkGray $line
         }
