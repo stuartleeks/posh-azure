@@ -30,13 +30,11 @@ function DeploymentNameCompleter {
 Register-ArgumentCompleter `
     -Command ( 'Get-AzureRmResourceGroupDeployment', 'Get-AzureRmResourceGroupDeploymentOperation', 'New-AzureRmResourceGroupDeployment', 'Remove-AzureRmResourceGroupDeployment', 'Save-AzureRmResourceGroupDeploymentTemplate', 'Stop-AzureRmResourceGroupDeployment' ) `
     -Parameter 'ResourceGroupName' `
-    -Description 'Complete the -DeploymentName parameter value for Azure cmdlets: Get-AzureDeploymentEvent -DeploymentName <TAB>' `
     -ScriptBlock $function:DeploymentNameCompleter
     
 Register-ArgumentCompleter `
     -Command ( 'Get-AzureRmResourceGroupDeployment', 'Remove-AzureRmResourceGroupDeployment', 'Stop-AzureRmResourceGroupDeployment') `
     -Parameter 'Name' `
-    -Description 'Complete the -Name parameter value for Azure cmdlets: Get-AzureDeploymentEvent -Name <TAB>' `
     -ScriptBlock $function:DeploymentNameCompleter
     
 

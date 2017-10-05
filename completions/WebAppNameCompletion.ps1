@@ -31,7 +31,6 @@ Register-ArgumentCompleter `
     -Command ( 'Edit-AzureRmWebAppBackupConfiguration', 'Get-AzureRmWebApp', 'Get-AzureRmWebAppBackup', 'Get-AzureRmWebAppBackupConfiguration', 'Get-AzureRmWebAppBackupList', 'Get-AzureRmWebAppCertificate', 'Get-AzureRmWebAppMetrics', 'Get-AzureRmWebAppPublishingProfile', 'Get-AzureRmWebAppSlot', 'Get-AzureRmWebAppSlotConfigName', 'Get-AzureRmWebAppSlotMetrics', 'Get-AzureRmWebAppSlotPublishingProfile', 'Get-AzureRmWebAppSSLBinding', 'New-AzureRmWebApp', 'New-AzureRmWebAppBackup', 'New-AzureRmWebAppSlot', 'New-AzureRmWebAppSSLBinding', 'Remove-AzureRmWebApp', 'Remove-AzureRmWebAppBackup', 'Remove-AzureRmWebAppSlot', 'Remove-AzureRmWebAppSSLBinding', 'Reset-AzureRmWebAppPublishingProfile', 'Reset-AzureRmWebAppSlotPublishingProfile', 'Restart-AzureRmWebApp', 'Restart-AzureRmWebAppSlot', 'Restore-AzureRmWebAppBackup', 'Set-AzureRmWebApp', 'Set-AzureRmWebAppSlot', 'Set-AzureRmWebAppSlotConfigName', 'Start-AzureRmWebApp', 'Start-AzureRmWebAppSlot', 'Stop-AzureRmWebApp', 'Stop-AzureRmWebAppSlot', 'Swap-AzureRmWebAppSlot', 'Switch-AzureRmWebAppSlot'
  ) `
     -Parameter 'Name' `
-    -Description 'Complete the -Name parameter value for Azure cmdlets: Get-AzureRmWebApp -Name <TAB>' `
     -ScriptBlock $function:WebAppNameCompleter
     
 

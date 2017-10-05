@@ -31,7 +31,6 @@ Register-ArgumentCompleter `
     -Command ( 'Get-AzureRmAppServicePlan', 'Get-AzureRmAppServicePlanMetrics', 'New-AzureRmAppServicePlan', 'Remove-AzureRmAppServicePlan', 'Set-AzureRmAppServicePlan'    
 ) `
     -Parameter 'Name' `
-    -Description 'Complete the -Name parameter value for Azure cmdlets: Get-AzureRmAppServicePlan -Name <TAB>' `
     -ScriptBlock $function:AppServicePlanNameCompleter
     
 

@@ -31,7 +31,6 @@ Register-ArgumentCompleter `
     -Command ( 'Get-AzureRmStorageAccount', 'Get-AzureRmStorageAccountKey', 'Get-AzureRmStorageAccountNameAvailability', 'Get-AzureStorageContainerAcl', 'New-AzureRmStorageAccount', 'New-AzureRmStorageAccountKey', 'Remove-AzureRmStorageAccount', 'Set-AzureRmCurrentStorageAccount', 'Set-AzureRmStorageAccount'    
 ) `
     -Parameter 'Name' `
-    -Description 'Complete the -Name parameter value for Azure cmdlets: Get-AzureRmStorageAccount -Name <TAB>' `
     -ScriptBlock $function:StorageAccountNameCompleter
     
 
