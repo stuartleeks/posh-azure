@@ -30,6 +30,13 @@ Once the module is installed, you can load it with:
 
 ## Release notes
 
+## 0.3.0 (published ??)
+Add completion for
+* VM Names
+* Update to enable working without TabExpansionPlusPlus installed (which helps with PowerShellCore!)
+
+Add Show-AzureRmResourceGroupDeploymentProgress cmdlet to show auto-updating progress on ARM deployments
+
 ## 0.2.0 (published 2017-08-31)
 Add completion for 
 * AppServicePlan name

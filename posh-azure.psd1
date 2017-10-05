@@ -8,104 +8,107 @@
 
 @{
 
-# Script module or binary module file associated with this manifest.
-RootModule = 'posh-azure.psm1'
+    # Script module or binary module file associated with this manifest.
+    RootModule        = 'posh-azure.psm1'
 
-# Version number of this module.
-ModuleVersion = '0.2.0'
+    # Version number of this module.
+    ModuleVersion     = '0.3.0'
 
-# ID used to uniquely identify this module
-GUID = 'd5f7b02a-4cf0-4ed6-861c-5fdd4a28f658'
+    # ID used to uniquely identify this module
+    GUID              = 'd5f7b02a-4cf0-4ed6-861c-5fdd4a28f658'
 
-# Author of this module
-Author = 'Stuart Leeks'
+    # Author of this module
+    Author            = 'Stuart Leeks'
 
-# Company or vendor of this module
-CompanyName = 'Unknown'
+    # Company or vendor of this module
+    CompanyName       = 'Unknown'
 
-# Copyright statement for this module
-Copyright = '(c) 2017 Stuart Leeks. All rights reserved.'
+    # Copyright statement for this module
+    Copyright         = '(c) 2017 Stuart Leeks. All rights reserved.'
 
-# Description of the functionality provided by this module
-Description = 'Helpers for working with the Azure PowerShell cmdlets'
+    # Description of the functionality provided by this module
+    Description       = 'Helpers for working with the Azure PowerShell cmdlets'
 
-# Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '3.0'
+    # Minimum version of the Windows PowerShell engine required by this module
+    PowerShellVersion = '3.0'
 
-# Name of the Windows PowerShell host required by this module
-# PowerShellHostName = ''
+    # Name of the Windows PowerShell host required by this module
+    # PowerShellHostName = ''
 
-# Minimum version of the Windows PowerShell host required by this module
-# PowerShellHostVersion = ''
+    # Minimum version of the Windows PowerShell host required by this module
+    # PowerShellHostVersion = ''
 
-# Minimum version of Microsoft .NET Framework required by this module
-# DotNetFrameworkVersion = ''
+    # Minimum version of Microsoft .NET Framework required by this module
+    # DotNetFrameworkVersion = ''
 
-# Minimum version of the common language runtime (CLR) required by this module
-# CLRVersion = ''
+    # Minimum version of the common language runtime (CLR) required by this module
+    # CLRVersion = ''
 
-# Processor architecture (None, X86, Amd64) required by this module
-# ProcessorArchitecture = ''
+    # Processor architecture (None, X86, Amd64) required by this module
+    # ProcessorArchitecture = ''
 
-# Modules that must be imported into the global environment prior to importing this module
-# RequiredModules = @('TabExpansionPlusPlus')
+    # Modules that must be imported into the global environment prior to importing this module
+    # RequiredModules = @('TabExpansionPlusPlus')
 
-# Assemblies that must be loaded prior to importing this module
-# RequiredAssemblies = @()
+    # Assemblies that must be loaded prior to importing this module
+    # RequiredAssemblies = @()
 
-# Script files (.ps1) that are run in the caller's environment prior to importing this module.
-# ScriptsToProcess = @()
+    # Script files (.ps1) that are run in the caller's environment prior to importing this module.
+    # ScriptsToProcess = @()
 
-# Type files (.ps1xml) to be loaded when importing this module
-# TypesToProcess = @()
+    # Type files (.ps1xml) to be loaded when importing this module
+    # TypesToProcess = @()
 
-# Format files (.ps1xml) to be loaded when importing this module
-# FormatsToProcess = @()
+    # Format files (.ps1xml) to be loaded when importing this module
+    # FormatsToProcess = @()
 
-# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-# NestedModules = @()
+    # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
+    # NestedModules = @()
 
-# Functions to export from this module
-FunctionsToExport = 'Show-AzureRmResourceGroupDeploymentProgress'
+    # Functions to export from this module
+    FunctionsToExport = 'Show-AzureRmResourceGroupDeploymentProgress'
 
-# Cmdlets to export from this module
-CmdletsToExport = ''
+    # Cmdlets to export from this module
+    CmdletsToExport   = ''
 
-# Variables to export from this module
-VariablesToExport = ''
+    # Variables to export from this module
+    VariablesToExport = ''
 
-# Aliases to export from this module
-AliasesToExport = ''
+    # Aliases to export from this module
+    AliasesToExport   = ''
 
-# DSC resources to export from this module
-# DscResourcesToExport = @()
+    # DSC resources to export from this module
+    # DscResourcesToExport = @()
 
-# List of all modules packaged with this module
-# ModuleList = @('')
+    # List of all modules packaged with this module
+    # ModuleList = @('')
 
-# List of all files packaged with this module
-FileList = @('posh-azure.psm1', 
-            'completions/AppServicePlanNameCompletion.ps1', 
-            'completions/DeploymentNameCompletion.ps1', 
-            'completions/LocationCompletion.ps1', 
-            'completions/ResourceGroupNameCompletion.ps1',
-            'completions/StorageAccountNameCompletion.ps1',
-            'completions/WebAppNameCompletion.ps1'
-            )
+    # List of all files packaged with this module
+    FileList          = @(,
+        'posh-azure.ps1',
+        'posh-azure.psm1', 
+        'completions/AppServicePlanNameCompletion.ps1', 
+        'completions/DeploymentNameCompletion.ps1', 
+        'completions/LocationCompletion.ps1', 
+        'completions/ResourceGroupNameCompletion.ps1',
+        'completions/StorageAccountNameCompletion.ps1',
+        'completions/VMNameCompletion.ps1',
+        'completions/WebAppNameCompletion.ps1'
+    )
 
-# Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
-    PrivateData = @{
+    # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
+    PrivateData       = @{
     
         PSData = @{
     
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @('tab-completion', 'completion', 'azure')
+            Tags         = @('tab-completion', 'completion', 'azure')
     
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/stuartleeks/posh-azure/blob/master/LICENSE.md'
+            LicenseUri   = 'https://github.com/stuartleeks/posh-azure/blob/master/LICENSE.md'
     
             # A URL to the main website for this project.
-            ProjectUri = 'https://github.com/stuartleeks/posh-azure'
+            ProjectUri   = 'https://github.com/stuartleeks/posh-azure'
     
             # A URL to an icon representing this module.
             # IconUri = ''
@@ -117,11 +120,11 @@ FileList = @('posh-azure.psm1',
     
     } # End of PrivateData hashtable
 
-# HelpInfo URI of this module
-# HelpInfoURI = ''
+    # HelpInfo URI of this module
+    # HelpInfoURI = ''
 
-# Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
-# DefaultCommandPrefix = ''
+    # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
+    # DefaultCommandPrefix = ''
 
 }
 
