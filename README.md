@@ -10,8 +10,16 @@ I plan to keep working on this to improve completion, but if there are parameter
 
 ## Dependencies
 
+### PowerShell
+
+I've tested this on PowerShell 5.1 on Windows. In _theory_ I believe it should work on PowerShell 3 upwards - let me know if you test that!
+
 * [Azure PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-4.2.0)
-* [TabExpansionPlusPlus](https://www.powershellgallery.com/packages/TabExpansionPlusPlus/)
+
+### PowerShell Core
+
+I've also tested this with PowerShell Core
+* 
 
 ## Installation
 
@@ -26,6 +34,10 @@ Once the module is installed, you can load it with:
 ```powershell
  Import-Module -Name posh-azure
 ```
+
+**NOTE: You must ensure that you are logged in to Azure with the cmdlets to get completion**
+
+To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
 
 ## Release notes
