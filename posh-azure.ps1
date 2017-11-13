@@ -8,12 +8,19 @@ foreach ($file in dir $PSScriptRoot\completions\*.ps1) {
  #>
 function ParseOperationDuration($durationString) {
 
+    # TODO - create tests for this behavior!
     # expected behaviour (should put in tests)
     #(ParseOperationDuration "PT21.501S").ToString() # Timespan: 21.501 seconds
     #(ParseOperationDuration "PT5M21.501S").ToString() # Timespan: 5 minutes 21.501 seconds
     #(ParseOperationDuration "PT1H5M21.501S").ToString() # Timespan: 1 hour 5 minutes 21.501 seconds
     #(ParseOperationDuration "PT 21.501S").ToString() # throws exception for unhandled format
 
+    $negative = $false
+    if ($durationString.StartsWith("-"))
+    {
+        $negative = $true;
+        $durationString = $durationString.Substring(1)
+    }
     $timespan = $null
     switch -Regex ($durationString) {
         "^PT(?<seconds>\d*.\d*)S$" {
@@ -29,6 +36,9 @@ function ParseOperationDuration($durationString) {
     if ($null -eq $timespan) {
         $message = "unhandled duration format '$durationString'"
         throw $message
+    }
+    if ($negative){
+        $timespan = [TimeSpan]::Zero - $timespan
     }
     $timespan
 }
