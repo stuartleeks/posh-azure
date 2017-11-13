@@ -42,6 +42,9 @@ To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
 ## Release notes
 
+## 0.3.2 (published 2017-11-13)
+Update duration parsing to handle negative durations (yes - I have seen these!)
+
 ## 0.3.1 (published 2017-10-05)
 Fix colourisation of Show-AzureRmResourceGroupDeploymentProgress output on linux/bash
 
