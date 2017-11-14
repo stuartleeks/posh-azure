@@ -134,6 +134,10 @@ function Show-AzureRmResourceGroupDeploymentProgress() {
         $deployment = Get-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName `
             | Sort-Object -Property Timestamp -Descending `
             | Select-Object -First 1 
+        if ($deployment -eq $null){
+            Write-Host "No deployments"
+            return
+        }
         $DeploymentName = $deployment.DeploymentName
     }
 
