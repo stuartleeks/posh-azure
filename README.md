@@ -42,6 +42,9 @@ To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
 ## Release notes
 
+## 0.3.3 
+Fix: show friendly message when no deployments are found
+
 ## 0.3.2 (published 2017-11-13)
 Update duration parsing to handle negative durations (yes - I have seen these!)
 
