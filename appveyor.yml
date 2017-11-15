@@ -8,5 +8,7 @@ environment:
     secure: fwGMwHl4zwLum9NAgMiTZARUPEa/9G83BpX3dTCTskZMmoqi9padKBk1mTVgm2Xs
 build_script:
 - ps: |
-    Install-PackageProvider -Name NuGet -Force
-    Publish-Module -Path . -NuGetApiKey $env:PsGalleryKey
+    Install-PackageProvider -Name NuGet -Force | Out-Null
+    $PM = @{ Path = '.'; NuGetApiKey = $env:PsGalleryKey }
+    Publish-Module @PM
+    # Publish-Module -Path . -NuGetApiKey ($env:PsGalleryKey)
