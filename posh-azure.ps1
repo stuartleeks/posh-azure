@@ -93,6 +93,21 @@ function DumpOperations($operations) {
     }
 }
 
+function GetOutputs($deployment){
+    $deployment.Outputs.Keys | `
+        ForEach-Object { 
+            [PSCustomObject]@{
+                Name=$_
+                Type=$deployment.Outputs[$_].Type
+                Value=$deployment.Outputs[$_].Value
+            }
+        } 
+}
+function DumpOutputs($deployment){
+    $outputs = GetOutputs $deployment
+    $outputs | Format-Table
+}
+
 function GetDeployments($deploymentName) {
     $deployment = Get-AzureRmResourceGroupDeployment `
         -ResourceGroupName $ResourceGroupName `
@@ -152,12 +167,20 @@ function Show-AzureRmResourceGroupDeploymentProgress() {
         foreach ($summary in $deployments) {
             $deployment = $summary.Deployment
             $operations = $summary.Operations
-            Write-Host "Deployment: $($deployment.DeploymentName) ($($deployment.ProvisioningState))"
+            $duration = (get-date) - $deployment.Timestamp
+            if ($deployments[0].Deployment.ProvisioningState -eq "Running") {
+                Write-Host "Deployment: $($deployment.DeploymentName) ($($deployment.ProvisioningState) - duration $duration)"
+            } else
+            {
+                Write-Host "Deployment: $($deployment.DeploymentName) ($($deployment.ProvisioningState))" # skip duration once completed as we don't know the end time
+            }
             DumpOperations $operations
         }
 
         if ($deployments[0].Deployment.ProvisioningState -ne "Running") {
             Write-Host "Deployment finished"
+            Write-Host "Outputs:"
+            DumpOutputs $deployment
             return
         }
 
