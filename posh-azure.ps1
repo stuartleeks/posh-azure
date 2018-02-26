@@ -177,7 +177,8 @@ function Show-AzureRmResourceGroupDeploymentProgress() {
             DumpOperations $operations
         }
 
-        if ($deployments[0].Deployment.ProvisioningState -ne "Running") {
+        $deploymentState = $deployments[0].Deployment.ProvisioningState
+        if ($deploymentState -ne "Running" -and $deploymentState -ne "Accepted") {
             Write-Host "Deployment finished"
             Write-Host "Outputs:"
             DumpOutputs $deployment
