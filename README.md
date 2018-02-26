@@ -42,6 +42,9 @@ To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
 ## Release notes
 
+## 0.3.5 (published 2018-02-26)
+Handle `Accepted` deployment state and continue refreshing rather than exiting
+
 ## 0.3.4 (published 2018-02-25)
 Show deployment outpus once deployment completes
 
