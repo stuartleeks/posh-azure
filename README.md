@@ -19,7 +19,6 @@ I've tested this on PowerShell 5.1 on Windows. In _theory_ I believe it should w
 ### PowerShell Core
 
 I've also tested this with PowerShell Core
-* 
 
 ## Installation
 
@@ -39,44 +38,60 @@ Once the module is installed, you can load it with:
 
 To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
-
 ## Release notes
 
+## 0.3.6 (published 2018-04-05)
+
+Use UTC dates to avoid timezone issues
+
 ## 0.3.5 (published 2018-02-26)
+
 Handle `Accepted` deployment state and continue refreshing rather than exiting
 
 ## 0.3.4 (published 2018-02-25)
+
 Show deployment outpus once deployment completes
 
 ## 0.3.3 (published 2017-11-16)
+
 Fix: show friendly message when no deployments are found
 
 ## 0.3.2 (published 2017-11-13)
+
 Update duration parsing to handle negative durations (yes - I have seen these!)
 
 ## 0.3.1 (published 2017-10-05)
+
 Fix colourisation of Show-AzureRmResourceGroupDeploymentProgress output on linux/bash
 
 ## 0.3.0 (published 2017-10-05)
+
 Add completion for
+
 * VM Names
 * Update to enable working without TabExpansionPlusPlus installed (which helps with PowerShellCore!)
 
 Add Show-AzureRmResourceGroupDeploymentProgress cmdlet to show auto-updating progress on ARM deployments
 
 ## 0.2.0 (published 2017-08-31)
+
 Add completion for 
+
 * AppServicePlan name
 * StorageAccount name
 
 Revise commands that ResourceGroupName completion is applied to
 
 ## 0.1.1 (published 2017-07-21)
+
 Add completion for
+
 * WebApp names
 
 ## 0.1.0 First version (published 2017-07-15)
+
 Completion for 
+
 * ResourceGroupName parameters
 * Location parameters
 * DeploymentName parameters
