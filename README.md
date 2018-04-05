@@ -40,6 +40,10 @@ To have posh-azure always loaded, add the `Import-Module` to your `$PROFILE`
 
 ## Release notes
 
+## 0.3.7 (published 2018-04-05)
+
+Handle null outputs (e.g. on cancelled deployment)
+
 ## 0.3.6 (published 2018-04-05)
 
 Use UTC dates to avoid timezone issues
