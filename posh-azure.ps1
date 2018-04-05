@@ -167,7 +167,7 @@ function Show-AzureRmResourceGroupDeploymentProgress() {
         foreach ($summary in $deployments) {
             $deployment = $summary.Deployment
             $operations = $summary.Operations
-            $duration = (get-date) - $deployment.Timestamp
+            $duration = ([System.DateTime]::UtcNow) - $deployment.Timestamp
             if ($deployments[0].Deployment.ProvisioningState -eq "Running") {
                 Write-Host "Deployment: $($deployment.DeploymentName) ($($deployment.ProvisioningState) - duration $duration)"
             } else
