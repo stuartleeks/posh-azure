@@ -94,6 +94,9 @@ function DumpOperations($operations) {
 }
 
 function GetOutputs($deployment){
+    if ($deployment.Outputs -eq $null){
+        return $null
+    }
     $deployment.Outputs.Keys | `
         ForEach-Object { 
             [PSCustomObject]@{
